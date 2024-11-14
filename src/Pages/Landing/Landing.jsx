@@ -3,14 +3,17 @@ import LayOut from '../../Components/LayOut/LayOut'
 import Carousel from '../../Components/Carousel/CarouselEffect'
 import Category from '../../Components/Category/Category'
 import Product from '../../Components/Product/Product'
+import Footer from "../../Components/Footer/Footer";
+
 function Landing() {
   return (
     <LayOut>
-        <Carousel/>
-        <Category/>
-        <Product/>
+      <Carousel />
+      <Category />
+      <Product />
+      <Footer/>
     </LayOut>
-  )
+  );
 }
 
 export default Landing

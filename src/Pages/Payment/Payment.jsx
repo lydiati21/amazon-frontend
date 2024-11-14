@@ -13,7 +13,7 @@ import { Type } from "../../Utility/action.type";
 
 function Payment() {
   const [{ user, basket }, dispatch] = useContext(DataContext);
-  console.log(user);
+  // console.log(user);
 
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
@@ -54,9 +54,10 @@ function Payment() {
         payment_method: {
           card: elements.getElement(CardElement),
         },
+      
       });
 
-      // console.log(paymentIntent);
+        console.log(paymentIntent);
 
       // 3. after the confirmation --> order firestore database save, clear basket
       await db
@@ -75,7 +76,7 @@ function Payment() {
       setProcessing(false);
       navigate("/orders", { state: { msg: "you have placed new Order" } });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setProcessing(false);
     }
   };
